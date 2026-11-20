@@ -1,0 +1,414 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-display: "Syne", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Geist", "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono", "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* ==========================================================================
+   BASE CANVAS & INK TOKENS (Variation 3 Obsidian Dark + Crisp Archival Light)
+   ========================================================================== */
+:root {
+  --bg-canvas: #F6F7F8;
+  --bg-panel: #FFFFFF;
+  --bg-subtle: rgba(17, 17, 19, 0.045);
+  --bg-hover: rgba(17, 17, 19, 0.03);
+  --ink: #111113;
+  --ink-secondary: rgba(17, 17, 19, 0.74);
+  --ink-muted: rgba(17, 17, 19, 0.52);
+  --hairline: rgba(17, 17, 19, 0.10);
+  --hairline-strong: rgba(17, 17, 19, 0.22);
+}
+
+.dark {
+  --bg-canvas: #111113;
+  --bg-panel: #161619;
+  --bg-subtle: rgba(240, 240, 240, 0.055);
+  --bg-hover: rgba(255, 255, 255, 0.025);
+  --ink: #F0F0F0;
+  --ink-secondary: rgba(240, 240, 240, 0.76);
+  --ink-muted: rgba(240, 240, 240, 0.48);
+  --hairline: rgba(240, 240, 240, 0.085);
+  --hairline-strong: rgba(240, 240, 240, 0.18);
+}
+
+/* ==========================================================================
+   DYNAMIC DISPLAY TYPOGRAPHY MODES
+   ========================================================================== */
+:root,
+:root[data-typography="syne-dossier"] {
+  --active-display-font: "Syne", ui-sans-serif, system-ui, sans-serif;
+  --display-transform: uppercase;
+  --display-tracking: -0.02em;
+}
+
+:root[data-typography="modern-sans"] {
+  --active-display-font: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --display-transform: none;
+  --display-tracking: -0.025em;
+}
+
+:root[data-typography="editorial-serif"] {
+  --active-display-font: "Newsreader", Georgia, "Times New Roman", serif;
+  --display-transform: none;
+  --display-tracking: -0.015em;
+}
+
+:root[data-typography="geometric-clean"] {
+  --active-display-font: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --display-transform: none;
+  --display-tracking: -0.02em;
+}
+
+.font-display {
+  font-family: var(--active-display-font);
+}
+
+.dossier-display {
+  font-family: var(--active-display-font);
+  text-transform: var(--display-transform);
+  letter-spacing: var(--display-tracking);
+}
+
+.dossier-mono {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+/* ==========================================================================
+   SEMANTIC ACCENT PALETTE TOKENS (7 Palettes × Light & Dark)
+   ========================================================================== */
+:root,
+:root[data-palette="neon-green"] {
+  --accent: #00875A;
+  --accent-hover: #006644;
+  --accent-fg: #FFFFFF;
+  --accent-soft: rgba(0, 135, 90, 0.09);
+  --accent-aura: rgba(0, 135, 90, 0.12);
+}
+
+:root[data-palette="teal"] {
+  --accent: #0D9488;
+  --accent-hover: #0F766E;
+  --accent-fg: #FFFFFF;
+  --accent-soft: rgba(13, 148, 136, 0.10);
+  --accent-aura: rgba(13, 148, 136, 0.12);
+}
+
+:root[data-palette="indigo"] {
+  --accent: #4F46E5;
+  --accent-hover: #4338CA;
+  --accent-fg: #FFFFFF;
+  --accent-soft: rgba(79, 70, 229, 0.10);
+  --accent-aura: rgba(79, 70, 229, 0.12);
+}
+
+:root[data-palette="emerald"] {
+  --accent: #059669;
+  --accent-hover: #047857;
+  --accent-fg: #FFFFFF;
+  --accent-soft: rgba(5, 150, 105, 0.10);
+  --accent-aura: rgba(5, 150, 105, 0.12);
+}
+
+:root[data-palette="amber"] {
+  --accent: #B45309;
+  --accent-hover: #92400E;
+  --accent-fg: #FFFFFF;
+  --accent-soft: rgba(180, 83, 9, 0.10);
+  --accent-aura: rgba(180, 83, 9, 0.12);
+}
+
+:root[data-palette="crimson"] {
+  --accent: #BE123C;
+  --accent-hover: #9F1239;
+  --accent-fg: #FFFFFF;
+  --accent-soft: rgba(190, 18, 60, 0.10);
+  --accent-aura: rgba(190, 18, 60, 0.12);
+}
+
+:root[data-palette="sapphire"] {
+  --accent: #0369A1;
+  --accent-hover: #075985;
+  --accent-fg: #FFFFFF;
+  --accent-soft: rgba(3, 105, 161, 0.10);
+  --accent-aura: rgba(3, 105, 161, 0.12);
+}
+
+/* Dark mode optical-compensated accent tokens */
+.dark,
+.dark[data-palette="neon-green"] {
+  --accent: #00FFAA;
+  --accent-hover: #33FFBC;
+  --accent-fg: #090A0B;
+  --accent-soft: rgba(0, 255, 170, 0.09);
+  --accent-aura: rgba(0, 255, 170, 0.11);
+}
+
+.dark[data-palette="teal"] {
+  --accent: #2DD4BF;
+  --accent-hover: #5EEAD4;
+  --accent-fg: #042F2E;
+  --accent-soft: rgba(45, 212, 191, 0.12);
+  --accent-aura: rgba(45, 212, 191, 0.12);
+}
+
+.dark[data-palette="indigo"] {
+  --accent: #818CF8;
+  --accent-hover: #A5B4FC;
+  --accent-fg: #0B0D14;
+  --accent-soft: rgba(129, 140, 248, 0.14);
+  --accent-aura: rgba(129, 140, 248, 0.13);
+}
+
+.dark[data-palette="emerald"] {
+  --accent: #34D399;
+  --accent-hover: #6EE7B7;
+  --accent-fg: #042016;
+  --accent-soft: rgba(52, 211, 153, 0.13);
+  --accent-aura: rgba(52, 211, 153, 0.12);
+}
+
+.dark[data-palette="amber"] {
+  --accent: #F59E0B;
+  --accent-hover: #FBBF24;
+  --accent-fg: #111113;
+  --accent-soft: rgba(245, 158, 11, 0.14);
+  --accent-aura: rgba(245, 158, 11, 0.12);
+}
+
+.dark[data-palette="crimson"] {
+  --accent: #FB7185;
+  --accent-hover: #FDA4AF;
+  --accent-fg: #111113;
+  --accent-soft: rgba(251, 113, 133, 0.14);
+  --accent-aura: rgba(251, 113, 133, 0.13);
+}
+
+.dark[data-palette="sapphire"] {
+  --accent: #38BDF8;
+  --accent-hover: #7DD3FC;
+  --accent-fg: #071926;
+  --accent-soft: rgba(56, 189, 248, 0.14);
+  --accent-aura: rgba(56, 189, 248, 0.13);
+}
+
+/* ==========================================================================
+   SURFACE / CARD FRAMING GEOMETRY MODES (6 Distinct Architectural Styles)
+   ========================================================================== */
+:root,
+:root[data-surface="sharp"] {
+  --surface-radius: 0px;
+  --surface-radius-lg: 0px;
+  --surface-bg-light: #FFFFFF;
+  --surface-bg-dark: rgba(240, 240, 240, 0.04);
+  --surface-blur: 0px;
+  --surface-shadow-light: none;
+  --surface-shadow-dark: none;
+}
+
+:root[data-surface="hairline"] {
+  --surface-radius: 0.625rem;
+  --surface-radius-lg: 0.875rem;
+  --surface-bg-light: #FFFFFF;
+  --surface-bg-dark: rgba(240, 240, 240, 0.045);
+  --surface-blur: 0px;
+  --surface-shadow-light: none;
+  --surface-shadow-dark: none;
+}
+
+:root[data-surface="glass"] {
+  --surface-radius: 0.75rem;
+  --surface-radius-lg: 1rem;
+  --surface-bg-light: rgba(255, 255, 255, 0.72);
+  --surface-bg-dark: rgba(26, 26, 30, 0.56);
+  --surface-blur: 14px;
+  --surface-shadow-light: 0 4px 20px -8px rgba(17, 17, 19, 0.06);
+  --surface-shadow-dark: 0 10px 28px -12px rgba(0, 0, 0, 0.55);
+}
+
+:root[data-surface="elevated"] {
+  --surface-radius: 0.75rem;
+  --surface-radius-lg: 1rem;
+  --surface-bg-light: #FFFFFF;
+  --surface-bg-dark: #17171B;
+  --surface-blur: 0px;
+  --surface-shadow-light: 0 10px 30px -14px rgba(17, 17, 19, 0.12), 0 2px 6px -2px rgba(17, 17, 19, 0.05);
+  --surface-shadow-dark: 0 14px 36px -14px rgba(0, 0, 0, 0.75);
+}
+
+:root[data-surface="dossier"] {
+  --surface-radius: 2px;
+  --surface-radius-lg: 2px;
+  --surface-bg-light: #FFFFFF;
+  --surface-bg-dark: #16161A;
+  --surface-blur: 0px;
+  --surface-shadow-light: 4px 4px 0px 0px rgba(17, 17, 19, 0.09);
+  --surface-shadow-dark: 4px 4px 0px 0px rgba(0, 0, 0, 0.65);
+}
+
+:root[data-surface="tinted"] {
+  --surface-radius: 1rem;
+  --surface-radius-lg: 1.25rem;
+  --surface-bg-light: rgba(17, 17, 19, 0.035);
+  --surface-bg-dark: rgba(240, 240, 240, 0.065);
+  --surface-blur: 6px;
+  --surface-shadow-light: inset 0 1px 0 0 rgba(255, 255, 255, 0.7);
+  --surface-shadow-dark: inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
+}
+
+/* ==========================================================================
+   DYNAMIC PORTFOLIO UTILITY CLASSES
+   ========================================================================== */
+.portfolio-card {
+  border-radius: var(--surface-radius);
+  background-color: var(--surface-bg-light);
+  backdrop-filter: blur(var(--surface-blur));
+  box-shadow: var(--surface-shadow-light);
+  border-color: var(--hairline);
+}
+
+.dark .portfolio-card {
+  background-color: var(--surface-bg-dark);
+  box-shadow: var(--surface-shadow-dark);
+}
+
+.portfolio-frame {
+  border-radius: var(--surface-radius-lg);
+}
+
+.accent-text {
+  color: var(--accent);
+}
+
+.accent-bg {
+  background-color: var(--accent);
+  color: var(--accent-fg);
+}
+
+.accent-bg:hover {
+  background-color: var(--accent-hover);
+}
+
+.accent-soft-bg {
+  background-color: var(--accent-soft);
+}
+
+.accent-border {
+  border-color: var(--accent);
+}
+
+.hover-accent-text:hover {
+  color: var(--accent);
+}
+
+.hover-accent-border:hover {
+  border-color: var(--accent);
+}
+
+/* Variation 3 thin architectural scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--hairline-strong);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* Custom pointer cursor suppression (desktop fine pointer + motion allowed only) */
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  html[data-cursor="dot-ring"],
+  html[data-cursor="dot-ring"] *,
+  html[data-cursor="reticle"],
+  html[data-cursor="reticle"] *,
+  html[data-cursor="molecular-orbit"],
+  html[data-cursor="molecular-orbit"] *,
+  html[data-cursor="editorial-brackets"],
+  html[data-cursor="editorial-brackets"] *,
+  html[data-cursor="comet-trail"],
+  html[data-cursor="comet-trail"] * {
+    cursor: none !important;
+  }
+}
+
+@keyframes cursor-spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.cursor-orbit-spin {
+  animation: cursor-spin-slow 7s linear infinite;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    background-color: var(--bg-canvas);
+    color: var(--ink);
+  }
+
+  body {
+    background-color: var(--bg-canvas);
+    color: var(--ink);
+  }
+
+  ::selection {
+    background-color: var(--accent);
+    color: var(--accent-fg);
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--active-display-font);
+    text-wrap: balance;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printable-cv-sheet,
+  #printable-cv-sheet * {
+    visibility: visible;
+  }
+  #printable-cv-sheet {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background: #ffffff !important;
+    color: #0f172a !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+}

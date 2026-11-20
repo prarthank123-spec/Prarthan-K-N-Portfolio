@@ -1,11 +1,14 @@
-<div align="center">
+# Dr. Prarthan KN — Academic & Clinical Pharmacy Portfolio
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+Responsive, single-page personal portfolio designed for direct deployment on **GitHub Pages** with zero build steps.
 
-  <h1>Built with AI Studio</h2>
+## Quick Setup for GitHub Pages
 
-  <p>The fastest path from prompt to production with Gemini.</p>
-
-  <a href="https://aistudio.google.com/apps">Start building</a>
-
-</div>
+1. Create a new public GitHub repository (for example, `prarthan-portfolio` or `<your-username>.github.io`).
+2. Copy the standalone `github-pages/index.html` file to the root of your repository as `index.html`.
+3. Add your personal assets directly into the repository root alongside `index.html`:
+   - **`profile.jpg`** — Your portrait photo (recommended aspect ratio `3:4`, minimum `900 × 1200 px`). If omitted, the page automatically renders a clean initials monogram placeholder.
+   - **`CV.pdf`** — Your latest Curriculum Vitae PDF, linked directly to the **Download CV** button.
+4. Commit and push the three files (`index.html`, `profile.jpg`, `CV.pdf`) to the `main` branch.
+5. In your repository, go to **Settings → Pages → Build and deployment**, set **Source** to **Deploy from a branch**, select **`main`** and **`/ (root)`**, and click **Save**.
+6. Your portfolio will be live at `https://<your-username>.github.io/<repo-name>/` within 1–2 minutes.
