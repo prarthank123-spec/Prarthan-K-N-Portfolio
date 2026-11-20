@@ -1,0 +1,650 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dossier: Dr. Prarthan KN | PharmD (PB) — Clinical Pharmacy &amp; Research</title>
+    <meta
+      name="description"
+      content="Academic and clinical portfolio dossier of Dr. Prarthan KN (PharmD PB, B.Pharm) — Clinical Pharmacy Intern specializing in pharmacovigilance (VigiFlow), regulatory affairs, antimicrobial stewardship, and evidence-based clinical research."
+    />
+    <meta name="author" content="Dr. Prarthan KN" />
+
+    <!-- Fonts: Syne, Geist, Geist Mono + Optional Studio Pairings -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Geist+Mono:wght@400;500;700&family=Geist:wght@300;400;500;600&family=Newsreader:wght@500;600&family=Outfit:wght@500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&family=Syne:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS CDN (Zero Build Required for GitHub Pages) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              display: ['"Syne"', 'ui-sans-serif', 'sans-serif'],
+              sans: ['"Geist"', '"DM Sans"', 'ui-sans-serif', 'sans-serif'],
+              mono: ['"Geist Mono"', 'ui-monospace', 'monospace'],
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Flicker-free Variation 3 defaults & saved config loader -->
+    <script>
+      (function () {
+        try {
+          const savedTheme = localStorage.getItem('prarthan-theme-v2');
+          if (savedTheme === 'light') {
+            document.documentElement.classList.remove('dark');
+          } else {
+            document.documentElement.classList.add('dark');
+          }
+          const raw = localStorage.getItem('prarthan-design-config-v2');
+          if (raw) {
+            const cfg = JSON.parse(raw);
+            if (cfg.palette) document.documentElement.setAttribute('data-palette', cfg.palette);
+            if (cfg.typography) document.documentElement.setAttribute('data-typography', cfg.typography);
+            if (cfg.surface) document.documentElement.setAttribute('data-surface', cfg.surface);
+            if (cfg.cursor) document.documentElement.setAttribute('data-cursor', cfg.cursor);
+          } else {
+            document.documentElement.setAttribute('data-palette', 'neon-green');
+            document.documentElement.setAttribute('data-typography', 'syne-dossier');
+            document.documentElement.setAttribute('data-surface', 'sharp');
+            document.documentElement.setAttribute('data-cursor', 'default');
+          }
+        } catch (e) {}
+      })();
+    </script>
+
+    <style>
+      :root {
+        --bg-canvas: #F6F7F8;
+        --bg-subtle: rgba(17, 17, 19, 0.045);
+        --bg-hover: rgba(17, 17, 19, 0.03);
+        --ink: #111113;
+        --ink-secondary: rgba(17, 17, 19, 0.74);
+        --ink-muted: rgba(17, 17, 19, 0.52);
+        --hairline: rgba(17, 17, 19, 0.10);
+        --hairline-strong: rgba(17, 17, 19, 0.22);
+      }
+      .dark {
+        --bg-canvas: #111113;
+        --bg-subtle: rgba(240, 240, 240, 0.055);
+        --bg-hover: rgba(255, 255, 255, 0.025);
+        --ink: #F0F0F0;
+        --ink-secondary: rgba(240, 240, 240, 0.76);
+        --ink-muted: rgba(240, 240, 240, 0.48);
+        --hairline: rgba(240, 240, 240, 0.085);
+        --hairline-strong: rgba(240, 240, 240, 0.18);
+      }
+
+      :root, :root[data-typography="syne-dossier"] { --active-display-font: "Syne", sans-serif; --display-transform: uppercase; }
+      :root[data-typography="modern-sans"] { --active-display-font: "Plus Jakarta Sans", sans-serif; --display-transform: none; }
+      :root[data-typography="editorial-serif"] { --active-display-font: "Newsreader", Georgia, serif; --display-transform: none; }
+      :root[data-typography="geometric-clean"] { --active-display-font: "Outfit", sans-serif; --display-transform: none; }
+
+      .dossier-display { font-family: var(--active-display-font); text-transform: var(--display-transform); letter-spacing: -0.02em; }
+      .dossier-mono { font-family: "Geist Mono", monospace; text-transform: uppercase; letter-spacing: 0.14em; }
+
+      /* 7 Palettes Light */
+      :root, :root[data-palette="neon-green"] { --accent: #00875A; --accent-fg: #FFFFFF; --accent-soft: rgba(0,135,90,0.09); --accent-aura: rgba(0,135,90,0.12); }
+      :root[data-palette="teal"] { --accent: #0D9488; --accent-fg: #FFFFFF; --accent-soft: rgba(13,148,136,0.10); --accent-aura: rgba(13,148,136,0.12); }
+      :root[data-palette="indigo"] { --accent: #4F46E5; --accent-fg: #FFFFFF; --accent-soft: rgba(79,70,229,0.10); --accent-aura: rgba(79,70,229,0.12); }
+      :root[data-palette="emerald"] { --accent: #059669; --accent-fg: #FFFFFF; --accent-soft: rgba(5,150,105,0.10); --accent-aura: rgba(5,150,105,0.12); }
+      :root[data-palette="amber"] { --accent: #B45309; --accent-fg: #FFFFFF; --accent-soft: rgba(180,83,9,0.10); --accent-aura: rgba(180,83,9,0.12); }
+      :root[data-palette="crimson"] { --accent: #BE123C; --accent-fg: #FFFFFF; --accent-soft: rgba(190,18,60,0.10); --accent-aura: rgba(190,18,60,0.12); }
+      :root[data-palette="sapphire"] { --accent: #0369A1; --accent-fg: #FFFFFF; --accent-soft: rgba(3,105,161,0.10); --accent-aura: rgba(3,105,161,0.12); }
+
+      /* 7 Palettes Dark */
+      .dark, .dark[data-palette="neon-green"] { --accent: #00FFAA; --accent-fg: #090A0B; --accent-soft: rgba(0,255,170,0.09); --accent-aura: rgba(0,255,170,0.11); }
+      .dark[data-palette="teal"] { --accent: #2DD4BF; --accent-fg: #042F2E; --accent-soft: rgba(45,212,191,0.12); --accent-aura: rgba(45,212,191,0.12); }
+      .dark[data-palette="indigo"] { --accent: #818CF8; --accent-fg: #0B0D14; --accent-soft: rgba(129,140,248,0.14); --accent-aura: rgba(129,140,248,0.13); }
+      .dark[data-palette="emerald"] { --accent: #34D399; --accent-fg: #042016; --accent-soft: rgba(52,211,153,0.13); --accent-aura: rgba(52,211,153,0.12); }
+      .dark[data-palette="amber"] { --accent: #F59E0B; --accent-fg: #111113; --accent-soft: rgba(245,158,11,0.14); --accent-aura: rgba(245,158,11,0.12); }
+      .dark[data-palette="crimson"] { --accent: #FB7185; --accent-fg: #111113; --accent-soft: rgba(251,113,133,0.14); --accent-aura: rgba(251,113,133,0.13); }
+      .dark[data-palette="sapphire"] { --accent: #38BDF8; --accent-fg: #071926; --accent-soft: rgba(56,189,248,0.14); --accent-aura: rgba(56,189,248,0.13); }
+
+      /* 6 Surfaces */
+      :root, :root[data-surface="sharp"] { --surface-radius: 0px; --surface-bg-light: #FFFFFF; --surface-bg-dark: rgba(240,240,240,0.04); --surface-blur: 0px; --surface-shadow: none; }
+      :root[data-surface="hairline"] { --surface-radius: 10px; --surface-bg-light: #FFFFFF; --surface-bg-dark: rgba(240,240,240,0.045); --surface-blur: 0px; --surface-shadow: none; }
+      :root[data-surface="glass"] { --surface-radius: 12px; --surface-bg-light: rgba(255,255,255,0.72); --surface-bg-dark: rgba(26,26,30,0.56); --surface-blur: 14px; --surface-shadow: 0 8px 24px -12px rgba(0,0,0,0.4); }
+      :root[data-surface="elevated"] { --surface-radius: 12px; --surface-bg-light: #FFFFFF; --surface-bg-dark: #17171B; --surface-blur: 0px; --surface-shadow: 0 12px 30px -14px rgba(0,0,0,0.45); }
+      :root[data-surface="dossier"] { --surface-radius: 2px; --surface-bg-light: #FFFFFF; --surface-bg-dark: #16161A; --surface-blur: 0px; --surface-shadow: 4px 4px 0px 0px rgba(0,0,0,0.35); }
+      :root[data-surface="tinted"] { --surface-radius: 16px; --surface-bg-light: rgba(17,17,19,0.04); --surface-bg-dark: rgba(240,240,240,0.065); --surface-blur: 6px; --surface-shadow: none; }
+
+      .portfolio-card { border-radius: var(--surface-radius); background-color: var(--surface-bg-light); backdrop-filter: blur(var(--surface-blur)); box-shadow: var(--surface-shadow); border-color: var(--hairline); }
+      .dark .portfolio-card { background-color: var(--surface-bg-dark); }
+      .accent-text { color: var(--accent); }
+      .accent-bg { background-color: var(--accent); color: var(--accent-fg); }
+      .accent-soft-bg { background-color: var(--accent-soft); }
+      .accent-border { border-color: var(--accent); }
+
+      @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+        html[data-cursor="dot-ring"], html[data-cursor="dot-ring"] *,
+        html[data-cursor="reticle"], html[data-cursor="reticle"] *,
+        html[data-cursor="molecular-orbit"], html[data-cursor="molecular-orbit"] *,
+        html[data-cursor="editorial-brackets"], html[data-cursor="editorial-brackets"] *,
+        html[data-cursor="comet-trail"], html[data-cursor="comet-trail"] * { cursor: none !important; }
+      }
+      @keyframes cursor-spin-slow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+      .cursor-orbit-spin { animation: cursor-spin-slow 7s linear infinite; transform-origin: center; }
+
+      body { background-color: var(--bg-canvas); color: var(--ink); font-family: "Geist", sans-serif; }
+      ::-webkit-scrollbar { width: 4px; height: 4px; }
+      ::-webkit-scrollbar-thumb { background: var(--hairline-strong); }
+      ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+      .tabular-nums { font-variant-numeric: tabular-nums; }
+    </style>
+  </head>
+
+  <body class="antialiased lg:h-screen lg:overflow-hidden">
+    <div id="portfolio-backdrop" aria-hidden="true" class="pointer-events-none fixed inset-0 z-0 overflow-hidden"></div>
+    <div id="custom-cursor-layer" aria-hidden="true"></div>
+
+    <!-- Mobile Sticky Top Bar -->
+    <header class="sticky top-0 z-40 flex h-14 items-center justify-between border-b px-4 lg:hidden" style="border-color:var(--hairline);background:var(--bg-canvas);">
+      <a href="#overview" class="dossier-display text-sm font-extrabold">Dr. Prarthan KN</a>
+      <div class="flex items-center gap-2">
+        <button type="button" data-open-studio class="dossier-mono border px-2.5 py-1.5 text-[10px]" style="border-color:var(--hairline);">Studio</button>
+        <button type="button" data-theme-toggle class="dossier-mono border px-2.5 py-1.5 text-[10px]" style="border-color:var(--hairline);">Mode</button>
+      </div>
+    </header>
+
+    <!-- 3-Pane Clinical Dossier Shell -->
+    <div class="relative z-10 grid min-h-screen grid-cols-1 lg:h-screen lg:grid-cols-[276px_minmax(0,1fr)] xl:grid-cols-[276px_minmax(0,1fr)_316px]">
+      <!-- LEFT PANE: IDENTITY SIDEBAR -->
+      <aside class="flex flex-col justify-between border-b p-6 lg:h-screen lg:overflow-y-auto lg:border-r lg:border-b-0" style="border-color:var(--hairline);">
+        <div>
+          <div class="mb-6 aspect-square w-full border p-2" style="border-color:var(--accent);background:var(--bg-subtle);">
+            <img
+              src="profile.jpg"
+              alt="Dr. Prarthan KN"
+              onerror="this.style.display='none';this.nextElementSibling.classList.remove('hidden');"
+              class="h-full w-full object-cover object-top brightness-95 contrast-[1.08]"
+            />
+            <div class="hidden flex h-full w-full flex-col items-center justify-center">
+              <span class="dossier-display accent-text text-3xl font-extrabold">PK</span>
+              <span class="dossier-mono mt-2 text-[10px] opacity-60">PHARMD (PB)</span>
+            </div>
+          </div>
+
+          <p class="dossier-mono accent-text text-[10px] font-medium">[ License KSPC ]</p>
+          <h2 class="dossier-display mt-2.5 text-2xl font-extrabold leading-tight">Dr. Prarthan KN</h2>
+          <p class="dossier-mono mt-2 text-[10px] leading-relaxed" style="color:var(--ink-muted);">
+            PharmD (PB) · B.Pharm · Clinical Intern · Karnataka, India
+          </p>
+
+          <div class="mt-8 border-t pt-6" style="border-color:var(--hairline);">
+            <p class="dossier-mono text-[10px]" style="color:var(--ink-muted);">Contact Core</p>
+            <div class="mt-3 space-y-2 font-mono text-[11px]" style="color:var(--ink-secondary);">
+              <a href="tel:+916361672257" class="block tabular-nums hover:underline">+91 6361672257</a>
+              <a href="mailto:prarthank123@gmail.com" class="block truncate hover:underline">prarthank123@gmail.com</a>
+              <p class="text-[10px]" style="color:var(--ink-muted);">Puttur, Karnataka, India</p>
+            </div>
+            <div class="mt-4 flex items-center gap-4 font-mono text-[10px] uppercase tracking-widest">
+              <a href="https://www.linkedin.com/in/prarthan-kn-39632a2b3/" target="_blank" rel="noopener noreferrer" class="hover:underline">LinkedIn ↗</a>
+              <a href="https://share.google/nEEqim0xCMG8apCKP" target="_blank" rel="noopener noreferrer" class="hover:underline">ResearchGate ↗</a>
+            </div>
+            <a href="CV.pdf" download="Dr_Prarthan_KN_CV.pdf" class="accent-bg dossier-mono mt-6 flex min-h-[44px] w-full items-center justify-center px-4 py-3 text-[11px] font-bold">
+              Download Dossier
+            </a>
+            <button type="button" data-open-studio class="dossier-mono mt-2.5 flex min-h-[38px] w-full items-center justify-center border px-3 py-2 text-[10px]" style="border-color:var(--hairline);color:var(--ink-secondary);">
+              Design &amp; Cursor Studio
+            </button>
+          </div>
+        </div>
+        <div class="mt-8 border-t pt-4 font-mono text-[10px]" style="border-color:var(--hairline);color:var(--ink-muted);">
+          <p class="uppercase tracking-[0.12em]">Languages</p>
+          <p class="mt-1" style="color:var(--ink-secondary);">English · Hindi · Kannada</p>
+        </div>
+      </aside>
+
+      <!-- CENTER PANE: PRIMARY DOSSIER -->
+      <main id="center-pane" class="min-w-0 lg:h-screen lg:overflow-y-auto xl:border-r" style="border-color:var(--hairline);">
+        <header class="sticky top-0 z-20 hidden h-16 items-center justify-between border-b px-10 lg:flex" style="border-color:var(--hairline);background:var(--bg-canvas);">
+          <nav class="flex items-center gap-5" aria-label="Primary dossier navigation">
+            <a href="#overview" data-nav="overview" class="dossier-mono accent-text text-[10.5px] font-bold">01. Overview</a>
+            <a href="#publications" data-nav="publications" class="dossier-mono text-[10.5px]" style="color:var(--ink-muted);">02. Publications</a>
+            <a href="#experience" data-nav="experience" class="dossier-mono text-[10.5px]" style="color:var(--ink-muted);">03. Experience</a>
+            <a href="#expertise" data-nav="expertise" class="dossier-mono text-[10.5px]" style="color:var(--ink-muted);">04. Skills</a>
+            <a href="#credentials" data-nav="credentials" class="dossier-mono text-[10.5px]" style="color:var(--ink-muted);">05. Credentials</a>
+            <a href="#contact" data-nav="contact" class="dossier-mono text-[10.5px]" style="color:var(--ink-muted);">06. Contact</a>
+          </nav>
+        </header>
+
+        <!-- 01. OVERVIEW -->
+        <section id="overview" class="px-6 py-10 sm:px-10 sm:py-12">
+          <div class="max-w-4xl">
+            <p class="dossier-mono text-[11px]" style="color:var(--ink-muted);">Executive Summary · 2026 · PharmD (PB) · B.Pharm</p>
+            <h1 class="dossier-display accent-text mt-5 text-4xl font-extrabold leading-[0.94] sm:text-5xl xl:text-[3.8rem]">
+              Clinical Systems Optimization.
+            </h1>
+            <p class="mt-7 max-w-[65ch] text-base leading-[1.72]" style="color:var(--ink-secondary);">
+              Final-year PharmD (Post-Baccalaureate) intern with a B.Pharm background and hands-on experience across clinical pharmacy, pharmacovigilance (VigiFlow), research, pharmaceutical quality and regulatory processes, and scientific writing. Experienced in medication review, prescription auditing, ADR reporting, antimicrobial stewardship, clinical data analysis, and research documentation.
+            </p>
+
+            <div class="mt-9 grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <div class="portfolio-card border p-5" style="border-left:2px solid var(--accent);">
+                <span class="dossier-mono block text-[10px]" style="color:var(--ink-muted);">Impact Metric</span>
+                <div class="mt-2 font-mono text-2xl font-semibold tabular-nums">25 <span class="text-lg font-medium opacity-75">Citations</span></div>
+              </div>
+              <div class="portfolio-card border p-5" style="border-left:2px solid var(--accent);">
+                <span class="dossier-mono block text-[10px]" style="color:var(--ink-muted);">Scholarly Archive</span>
+                <div class="mt-2 font-mono text-2xl font-semibold tabular-nums">22+ <span class="text-lg font-medium opacity-75">Outputs</span></div>
+              </div>
+              <div class="portfolio-card border p-5" style="border-left:2px solid var(--accent);">
+                <span class="dossier-mono block text-[10px]" style="color:var(--ink-muted);">H-Index</span>
+                <div class="mt-2 font-mono text-2xl font-semibold tabular-nums">02 <span class="text-lg font-medium opacity-75">Verified</span></div>
+              </div>
+              <div class="portfolio-card border p-5" style="border-left:2px solid var(--accent);">
+                <span class="dossier-mono block text-[10px]" style="color:var(--ink-muted);">Pipeline (2026)</span>
+                <div class="mt-2 font-mono text-2xl font-semibold tabular-nums">02 <span class="text-lg font-medium opacity-75">Under Review</span></div>
+              </div>
+            </div>
+
+            <div class="mt-10">
+              <span class="dossier-mono block text-[10px] mb-4" style="color:var(--ink-muted);">Core Competency Grid</span>
+              <div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                <a href="#expertise" class="dossier-mono border px-4 py-3 text-[10.5px]" style="border-color:var(--hairline);color:var(--ink-secondary);">Pharmacovigilance (VigiFlow)</a>
+                <a href="#expertise" class="dossier-mono border px-4 py-3 text-[10.5px]" style="border-color:var(--hairline);color:var(--ink-secondary);">Antimicrobial Stewardship</a>
+                <a href="#expertise" class="dossier-mono border px-4 py-3 text-[10.5px]" style="border-color:var(--hairline);color:var(--ink-secondary);">Systematic Review (PROSPERO)</a>
+                <a href="#expertise" class="dossier-mono border px-4 py-3 text-[10.5px]" style="border-color:var(--hairline);color:var(--ink-secondary);">Statistical Data Analysis (SPSS)</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 02. PUBLICATIONS -->
+        <section id="publications" class="border-t px-6 py-12 sm:px-10 sm:py-14" style="border-color:var(--hairline);">
+          <div class="max-w-4xl">
+            <p class="dossier-mono accent-text text-[10px] font-medium">02. Research &amp; Evidence Synthesis</p>
+            <h2 class="dossier-display mt-2.5 text-2xl font-extrabold sm:text-3xl">Publications &amp; Research Explorer</h2>
+            <div class="mt-6 flex flex-col gap-3">
+              <div class="flex flex-wrap gap-1.5 border p-1.5" style="border-color:var(--hairline);background:var(--bg-subtle);">
+                <button type="button" data-filter="All" class="pub-filter-btn accent-bg dossier-mono min-h-[36px] px-3 py-1.5 text-[10px] font-bold">All (7)</button>
+                <button type="button" data-filter="Systematic Review Protocols" class="pub-filter-btn dossier-mono min-h-[36px] px-3 py-1.5 text-[10px]">Systematic Review Protocols (2)</button>
+                <button type="button" data-filter="Original Research" class="pub-filter-btn dossier-mono min-h-[36px] px-3 py-1.5 text-[10px]">Original Research (4)</button>
+                <button type="button" data-filter="Ongoing/Under Review" class="pub-filter-btn dossier-mono min-h-[36px] px-3 py-1.5 text-[10px]">Ongoing / Review (1)</button>
+              </div>
+              <input id="pub-search" type="search" placeholder="Search titles, journals, keywords..." class="portfolio-card h-11 w-full border px-4 font-mono text-xs focus:outline-none" style="border-color:var(--hairline);" />
+            </div>
+            <div id="publications-list" class="mt-6 space-y-4"></div>
+          </div>
+        </section>
+
+        <!-- 03. EXPERIENCE -->
+        <section id="experience" class="border-t px-6 py-12 sm:px-10 sm:py-14" style="border-color:var(--hairline);">
+          <div class="max-w-4xl">
+            <p class="dossier-mono accent-text text-[10px] font-medium">03. Clinical Practice &amp; Training</p>
+            <h2 class="dossier-display mt-2.5 text-2xl font-extrabold sm:text-3xl">Clinical &amp; Industrial Timeline</h2>
+            <div id="experience-timeline" class="mt-8 space-y-4"></div>
+          </div>
+        </section>
+
+        <!-- 04. SKILLS WORKBENCH -->
+        <section id="expertise" class="border-t px-6 py-12 sm:px-10 sm:py-14" style="border-color:var(--hairline);">
+          <div class="max-w-4xl">
+            <div class="flex flex-wrap items-end justify-between gap-4">
+              <div>
+                <p class="dossier-mono accent-text text-[10px] font-medium">04. Domain Competencies · 14 Verified Capabilities</p>
+                <h2 class="dossier-display mt-2.5 text-2xl font-extrabold sm:text-3xl">Clinical &amp; Analytical Skill Architecture</h2>
+              </div>
+              <div class="inline-flex gap-1 border p-1" style="border-color:var(--hairline);background:var(--bg-subtle);">
+                <button id="skill-mode-explorer" type="button" class="accent-bg dossier-mono min-h-[34px] px-3 py-1.5 text-[10px] font-bold">Workbench</button>
+                <button id="skill-mode-matrix" type="button" class="dossier-mono min-h-[34px] px-3 py-1.5 text-[10px]">Matrix</button>
+              </div>
+            </div>
+            <div id="skills-workbench" class="mt-8"></div>
+          </div>
+        </section>
+
+        <!-- 05. CREDENTIALS -->
+        <section id="credentials" class="border-t px-6 py-12 sm:px-10 sm:py-14" style="border-color:var(--hairline);">
+          <div class="max-w-4xl">
+            <p class="dossier-mono accent-text text-[10px] font-medium">05. Academic &amp; Professional Standing</p>
+            <h2 class="dossier-display mt-2.5 text-2xl font-extrabold sm:text-3xl">Education, Certifications &amp; Conferences</h2>
+            <div class="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
+              <div class="space-y-4">
+                <div class="portfolio-card border p-5" style="border-left:2px solid var(--accent);">
+                  <div class="flex justify-between font-mono text-xs"><span style="color:var(--ink-muted);">2024 – 2026</span><span class="accent-text font-semibold">85.8%</span></div>
+                  <h3 class="mt-2 font-semibold text-sm">Doctor of Pharmacy — PharmD (PB)</h3>
+                  <p class="mt-1 text-xs" style="color:var(--ink-secondary);">Srinivas College of Pharmacy · RGUHS</p>
+                </div>
+                <div class="portfolio-card border p-5" style="border-left:2px solid var(--accent);">
+                  <div class="flex justify-between font-mono text-xs"><span style="color:var(--ink-muted);">2019 – 2024</span><span class="accent-text font-semibold">7.66 CGPA</span></div>
+                  <h3 class="mt-2 font-semibold text-sm">Bachelor of Pharmacy (B.Pharm)</h3>
+                  <p class="mt-1 text-xs" style="color:var(--ink-secondary);">Srinivas College of Pharmacy · RGUHS</p>
+                </div>
+              </div>
+              <div class="portfolio-card border divide-y" style="border-color:var(--hairline);">
+                <div class="p-4"><h3 class="text-sm font-semibold">Regulatory Affairs for Pharmaceutical Industry</h3><p class="mt-1 text-xs" style="color:var(--ink-muted);">Researium Labs · 1-month training</p></div>
+                <div class="p-4"><h3 class="text-sm font-semibold">Clinical Research, CDM &amp; Medical Coding</h3><p class="mt-1 text-xs" style="color:var(--ink-muted);">Researium Labs · 1-month course</p></div>
+                <div class="p-4"><h3 class="text-sm font-semibold">Good Clinical Practice (GCP)</h3><p class="mt-1 text-xs" style="color:var(--ink-muted);">NIDA Clinical Trials Network</p></div>
+                <div class="p-4"><h3 class="text-sm font-semibold">Medical Writing Skills for Beginners</h3><p class="mt-1 text-xs" style="color:var(--ink-muted);">International Medical Writers Association (IMWA)</p></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 06. CONTACT -->
+        <section id="contact" class="border-t px-6 py-12 sm:px-10 sm:py-14" style="border-color:var(--hairline);">
+          <div class="max-w-4xl flex flex-col justify-between gap-6 sm:flex-row sm:items-center">
+            <div>
+              <p class="dossier-mono accent-text text-[10px] font-medium">06. Direct Inquiries</p>
+              <h2 class="dossier-display mt-2 text-2xl font-extrabold">Get in Touch</h2>
+              <p class="mt-2 font-mono text-xs" style="color:var(--ink-secondary);">prarthank123@gmail.com · +91 6361672257 · Kabaka, Puttur – 574201</p>
+            </div>
+            <div class="flex flex-wrap gap-3">
+              <button id="copy-email-btn" type="button" class="dossier-mono border px-4 py-2.5 text-[10px]" style="border-color:var(--hairline);">Copy Email</button>
+              <a href="CV.pdf" download="Dr_Prarthan_KN_CV.pdf" class="accent-bg dossier-mono px-5 py-2.5 text-[10px] font-bold">Download PDF</a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- RIGHT PANE: DOCUMENTATION LOG (xl+ Desktop) -->
+      <aside class="hidden xl:flex xl:h-screen xl:flex-col xl:overflow-y-auto">
+        <div class="sticky top-0 z-10 flex h-16 items-center justify-between border-b px-6" style="border-color:var(--hairline);background:var(--bg-canvas);">
+          <span class="dossier-mono text-[10px]" style="color:var(--ink-secondary);">Documentation Log</span>
+        </div>
+        <a href="#experience" class="block border-b p-5 transition-colors hover:bg-[var(--bg-hover)]" style="border-color:var(--hairline);">
+          <span class="dossier-mono block text-[10px]" style="color:var(--ink-muted);">2026 / Intern</span>
+          <p class="mt-1.5 text-sm font-semibold">Srinivas Medical Sciences</p>
+          <p class="dossier-mono mt-1 text-[9.5px]" style="color:var(--ink-muted);">Medication profile review &amp; interaction auditing.</p>
+        </a>
+        <a href="#experience" class="block border-b p-5 transition-colors hover:bg-[var(--bg-hover)]" style="border-color:var(--hairline);">
+          <span class="dossier-mono block text-[10px]" style="color:var(--ink-muted);">2025–2026 / Clinical</span>
+          <p class="mt-1.5 text-sm font-semibold">Narayana Health</p>
+          <p class="dossier-mono mt-1 text-[9.5px]" style="color:var(--ink-muted);">VigiFlow ADR reporting &amp; Oncology ward rotation.</p>
+        </a>
+        <a href="#publications" class="accent-soft-bg block border-b p-5" style="border-color:var(--hairline);">
+          <span class="dossier-mono accent-text block text-[10px]">Pub: PROSPERO Protocols</span>
+          <p class="mt-1.5 text-sm font-semibold">MELAS Syndrome &amp; Leqselvi</p>
+          <p class="dossier-mono mt-1 text-[9.5px]" style="color:var(--ink-muted);">Scopus / Web of Science systematic review protocols.</p>
+        </a>
+        <a href="#credentials" class="block border-b p-5" style="border-color:var(--hairline);">
+          <span class="dossier-mono block text-[10px]" style="color:var(--ink-muted);">Academic History</span>
+          <p class="mt-2.5 text-xs font-semibold">PharmD (PB) · <span class="accent-text font-mono">85.8%</span></p>
+          <p class="mt-1.5 text-xs font-semibold">B.Pharm · <span class="accent-text font-mono">7.66 CGPA</span></p>
+        </a>
+        <div class="mt-auto border-t p-5" style="border-color:var(--hairline);background:var(--bg-subtle);">
+          <div class="mb-4 flex gap-2">
+            <button type="button" data-open-studio class="dossier-mono flex-1 border px-2.5 py-2 text-[10px]" style="border-color:var(--hairline);">Design &amp; Cursor</button>
+            <button type="button" data-theme-toggle class="dossier-mono border px-3 py-2 text-[10px]" style="border-color:var(--hairline);">Mode</button>
+          </div>
+          <p class="dossier-mono text-[9.5px]" style="color:var(--ink-muted);">Dossier Rev: 2026 · KSPC Reg.</p>
+          <p class="dossier-mono mt-1 text-[9.5px]" style="color:var(--ink-muted);">© 2026 Dr. Prarthan KN</p>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Design & Cursor Studio Drawer -->
+    <div id="studio-drawer" class="fixed inset-0 z-50 hidden justify-end bg-black/60 backdrop-blur-[2px]">
+      <div class="flex h-full w-full max-w-lg flex-col border-l shadow-2xl" style="border-color:var(--hairline-strong);background:var(--bg-canvas);color:var(--ink);">
+        <div class="flex items-center justify-between border-b px-6 py-4" style="border-color:var(--hairline);">
+          <div>
+            <h2 class="dossier-display text-sm font-bold">Design &amp; Cursor Studio</h2>
+            <p class="mt-0.5 font-mono text-[10px]" style="color:var(--ink-muted);">8 full themes · 7 palettes · 7 graphics · 7 cursors</p>
+          </div>
+          <button id="close-studio-btn" type="button" class="border px-3 py-1.5 font-mono text-xs" style="border-color:var(--hairline);">✕</button>
+        </div>
+        <div id="studio-controls" class="flex-1 space-y-6 overflow-y-auto px-6 py-6 text-xs"></div>
+        <div class="flex items-center justify-between border-t px-6 py-4" style="border-color:var(--hairline);">
+          <button id="reset-studio-btn" type="button" class="dossier-mono text-[10px]" style="color:var(--ink-muted);">Reset Dossier Default</button>
+          <button id="done-studio-btn" type="button" class="accent-bg dossier-mono px-4 py-2 text-[10px] font-bold">Done</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const PUBLICATIONS = [
+          { id: 'p1', idx: '01', cat: 'Systematic Review Protocols', label: 'Systematic Review Protocol', year: '2025–2026', title: 'Therapeutic Effectiveness, Safety Profile and Clinical Outcomes of Patients with MELAS Syndrome: A Systematic Review Protocol', venue: 'PROSPERO (Scopus / Web of Science indexed)', citation: 'Prarthan KN, et al. Therapeutic Effectiveness, Safety Profile and Clinical Outcomes of Patients with MELAS Syndrome: A Systematic Review Protocol. PROSPERO.' },
+          { id: 'p2', idx: '02', cat: 'Systematic Review Protocols', label: 'Systematic Review Protocol', year: '2025–2026', title: 'Efficacy and Safety of Leqselvi (deuruxolitinib) in Severe Alopecia Areata: A Systematic Review Protocol', venue: 'PROSPERO (Scopus / Web of Science indexed)', citation: 'Prarthan KN, et al. Efficacy and Safety of Leqselvi (deuruxolitinib) in Severe Alopecia Areata: A Systematic Review Protocol. PROSPERO.' },
+          { id: 'p3', idx: '03', cat: 'Original Research', label: 'Original Research', year: '2024', title: 'Public Attitudes Towards Antibiotic Consumption and Antimicrobial Resistance in Dakshina Kannada', venue: 'International Journal of Pharmaceutical and Healthcare Innovation', citation: 'Prarthan KN, et al. Public Attitudes Towards Antibiotic Consumption and Antimicrobial Resistance in Dakshina Kannada. IJPHI.' },
+          { id: 'p4', idx: '04', cat: 'Original Research', label: 'Original Research', year: '2024', title: 'Synthesis, Spectroscopic and Antibacterial Studies of Some N-Phenylpyridinium Chloride Derivatives', venue: 'Journal of Community Pharmacy Practice', citation: 'Prarthan KN, et al. Synthesis, Spectroscopic and Antibacterial Studies of Some N-Phenylpyridinium Chloride Derivatives. JCPP.' },
+          { id: 'p5', idx: '05', cat: 'Original Research', label: 'Original Research', year: '2024', title: 'Phytochemical Constituent and Anti-Bacterial Activity of Tabernaemontana divaricata (Dwarf) Leaves', venue: 'Journal of Biochemical Technology', citation: 'Prarthan KN, et al. Phytochemical Constituent and Anti-Bacterial Activity of Tabernaemontana divaricata (Dwarf) Leaves. JBT.' },
+          { id: 'p6', idx: '06', cat: 'Original Research', label: 'Original Research', year: '2024', title: 'Formulation and Evaluation of Herbal Face Pack for Healthy Skincare', venue: 'International Journal of Current Research in Physiology and Pharmacology', citation: 'Prarthan KN, et al. Formulation and Evaluation of Herbal Face Pack for Healthy Skincare. IJCRPP. 2024.' },
+          { id: 'p7', idx: '07', cat: 'Ongoing/Under Review', label: 'Ongoing / Under Review', year: '2025–2026', title: 'A Retrospective Study on the Role of Anti-Hypertensives in Safety, Clinical Efficacy and Nutrition in Toxemia-Induced Hypertension', venue: 'PharmD PB Research Project · Manuscript Prepared', citation: 'Prarthan KN. A Retrospective Study on the Role of Anti-Hypertensives in Safety, Clinical Efficacy and Nutrition in Toxemia-Induced Hypertension. 2025.' }
+        ];
+
+        const EXPERIENCE = [
+          { period: 'Feb 2026 – Present', role: 'Clinical Pharmacy Intern', org: 'Srinivas Institute of Medical Sciences & Research Centre, Mangalore', summary: 'Patient medication profile review for therapeutic appropriateness, drug interactions, medication-related problems, 2 months hospital pharmacy experience & clinical case reporting.' },
+          { period: 'Nov 2025 – Feb 2026', role: 'Clinical Pharmacy Intern', org: 'Narayana Health, Bangalore', summary: 'Prescription audits, VigiFlow ADR reporting, Antimicrobial Stewardship (AMS), patient counseling, and Oncology & Cardiology case series.' },
+          { period: 'Apr 2025 – Sep 2025', role: 'Research Trainee', org: 'Society of Clinical Research and Medical Professionals (SCRMP)', summary: '6-month structured training in clinical research documentation, editorial workflows, manuscript handling & publication ethics.' },
+          { period: 'Dec 2022 – Jan 2023', role: 'Industrial Training Intern', org: 'CE Chem Pharmaceutical Pvt. Ltd., Bangalore', summary: 'Practical GMP exposure in tablet and liquid oral manufacturing, quality control (QC), and packaging.' }
+        ];
+
+        const SKILL_PILLARS = [
+          { number: '01', shortTitle: 'Clinical & PV', title: 'Clinical & Pharmacovigilance', items: [
+            { name: 'ADR Reporting (VigiFlow)', tier: 'Hands-On Practice', appliedIn: 'Narayana Health, Bangalore' },
+            { name: 'Medication Review & Auditing', tier: 'Ward Practice', appliedIn: 'Srinivas Medical Sciences & Narayana Health' },
+            { name: 'Antimicrobial Stewardship', tier: 'Hospital Initiative', appliedIn: 'Narayana Health & Dakshina Kannada AMR Study' },
+            { name: 'Patient Counseling & Case Series', tier: 'Clinical', appliedIn: 'Hospital Pharmacy Rotations' }
+          ]},
+          { number: '02', shortTitle: 'Regulatory', title: 'Regulatory Affairs', items: [
+            { name: 'IND, NDA & ANDA Pathways', tier: 'Certified', appliedIn: 'Researium Labs Regulatory Program' },
+            { name: 'CTD & eCTD Dossier Concepts', tier: 'Framework', appliedIn: 'Regulatory Documentation Training' },
+            { name: 'CDSCO, ICH, FDA & EMA', tier: 'Compliance', appliedIn: 'NIDA GCP & CE Chem GMP Training' }
+          ]},
+          { number: '03', shortTitle: 'Data & Tech', title: 'Data & Analytics', items: [
+            { name: 'Microsoft Excel', tier: 'Applied', appliedIn: 'PharmD PB Retrospective Study' },
+            { name: 'SPSS Statistical Analysis', tier: 'Basic–Intermediate', appliedIn: 'Chi-Square & Descriptive Analysis' },
+            { name: 'R Programming & Basic SQL', tier: 'Foundational', appliedIn: 'Clinical Data Management' },
+            { name: 'AI Tools for Healthcare', tier: 'Proficient', appliedIn: 'Literature Screening & Workflows' }
+          ]},
+          { number: '04', shortTitle: 'Writing', title: 'Scientific Writing', items: [
+            { name: 'PROSPERO Systematic Reviews', tier: 'Indexed', appliedIn: 'MELAS & Leqselvi Protocols' },
+            { name: 'Manuscript Preparation', tier: '22+ Outputs', appliedIn: '2 Manuscripts Under Review (2026)' },
+            { name: 'Medical & Regulatory Writing', tier: 'Certified', appliedIn: 'SCRMP & IMWA Training' }
+          ]}
+        ];
+
+        // Publications Explorer
+        let curFilter = 'All', curQuery = '';
+        const pubList = document.getElementById('publications-list');
+        const renderPubs = () => {
+          const list = PUBLICATIONS.filter((p) => (curFilter === 'All' || p.cat === curFilter) && (!curQuery || (p.title + p.venue).toLowerCase().includes(curQuery.toLowerCase())));
+          pubList.innerHTML = list.map((p) => `
+            <article class="portfolio-card border p-5">
+              <div class="font-mono text-[10.5px]" style="color:var(--ink-muted);"><strong style="color:var(--ink);">${p.idx}</strong> · <span class="accent-text">${p.label}</span> · ${p.year}</div>
+              <h3 class="mt-2.5 text-base font-semibold leading-snug">${p.title}</h3>
+              <p class="mt-1.5 font-mono text-xs" style="color:var(--ink-secondary);">${p.venue}</p>
+              <button type="button" data-copy="${p.id}" class="dossier-mono mt-4 border px-3 py-1.5 text-[10px]" style="border-color:var(--hairline);">Copy Citation</button>
+            </article>
+          `).join('');
+          pubList.querySelectorAll('[data-copy]').forEach((b) => b.addEventListener('click', async () => {
+            const p = PUBLICATIONS.find((x) => x.id === b.dataset.copy);
+            try { await navigator.clipboard.writeText(p.citation); } catch (e) {}
+            b.textContent = 'Citation Copied';
+            setTimeout(() => { b.textContent = 'Copy Citation'; }, 1800);
+          }));
+        };
+        document.querySelectorAll('.pub-filter-btn').forEach((b) => b.addEventListener('click', () => {
+          curFilter = b.dataset.filter;
+          document.querySelectorAll('.pub-filter-btn').forEach((x) => x.classList.toggle('accent-bg', x.dataset.filter === curFilter));
+          renderPubs();
+        }));
+        document.getElementById('pub-search').addEventListener('input', (e) => { curQuery = e.target.value; renderPubs(); });
+        renderPubs();
+
+        // Experience
+        document.getElementById('experience-timeline').innerHTML = EXPERIENCE.map((e) => `
+          <div class="portfolio-card border p-5" style="border-left:2px solid var(--accent);">
+            <p class="dossier-mono accent-text text-[10px]">${e.period}</p>
+            <h3 class="mt-1.5 text-base font-bold">${e.role}</h3>
+            <p class="text-xs font-medium" style="color:var(--ink-secondary);">${e.org}</p>
+            <p class="mt-2 text-xs leading-relaxed" style="color:var(--ink-muted);">${e.summary}</p>
+          </div>
+        `).join('');
+
+        // Skills Workbench
+        let skillIdx = 0, skillMode = 'explorer';
+        const wb = document.getElementById('skills-workbench');
+        const renderSkills = () => {
+          document.getElementById('skill-mode-explorer').classList.toggle('accent-bg', skillMode === 'explorer');
+          document.getElementById('skill-mode-matrix').classList.toggle('accent-bg', skillMode === 'matrix');
+          if (skillMode === 'matrix') {
+            wb.innerHTML = `<div class="grid grid-cols-1 gap-4 md:grid-cols-2">${SKILL_PILLARS.map((p) => `
+              <div class="portfolio-card border p-5">
+                <p class="dossier-mono accent-text text-[10px]">${p.number}</p>
+                <h3 class="mt-1 font-bold text-sm">${p.title}</h3>
+                <ul class="mt-3 space-y-2 text-xs">${p.items.map((i) => `<li class="border-t pt-2" style="border-color:var(--hairline);"><strong>${i.name}</strong> <span class="accent-text font-mono text-[10px]">(${i.tier})</span><div class="font-mono text-[10px]" style="color:var(--ink-muted);">${i.appliedIn}</div></li>`).join('')}</ul>
+              </div>
+            `).join('')}</div>`;
+            return;
+          }
+          const active = SKILL_PILLARS[skillIdx];
+          wb.innerHTML = `<div class="portfolio-card border grid grid-cols-1 md:grid-cols-12">
+            <div class="border-b md:col-span-5 md:border-r md:border-b-0" style="border-color:var(--hairline);">
+              ${SKILL_PILLARS.map((p, i) => `<button type="button" data-pidx="${i}" class="flex w-full items-center justify-between border-b px-4 py-3.5 text-left text-xs last:border-b-0 ${i === skillIdx ? 'accent-soft-bg' : ''}" style="border-color:var(--hairline);"><span><strong class="${i === skillIdx ? 'accent-text' : ''} font-mono mr-2">${p.number}</strong>${p.title}</span><span>→</span></button>`).join('')}
+            </div>
+            <div class="p-6 md:col-span-7">
+              <p class="dossier-mono accent-text text-[10px]">Pillar ${active.number} of 04</p>
+              <h3 class="mt-1 text-lg font-bold">${active.title}</h3>
+              <div class="mt-4 space-y-3">${active.items.map((it) => `<div class="border-t pt-3" style="border-color:var(--hairline);"><div class="flex justify-between gap-2 text-xs font-semibold"><span>${it.name}</span><span class="accent-text font-mono text-[10px]">${it.tier}</span></div><p class="mt-1 font-mono text-[10px]" style="color:var(--ink-muted);">Applied in: ${it.appliedIn}</p></div>`).join('')}</div>
+            </div>
+          </div>`;
+          wb.querySelectorAll('[data-pidx]').forEach((b) => b.addEventListener('click', () => { skillIdx = Number(b.dataset.pidx); renderSkills(); }));
+        };
+        document.getElementById('skill-mode-explorer').addEventListener('click', () => { skillMode = 'explorer'; renderSkills(); });
+        document.getElementById('skill-mode-matrix').addEventListener('click', () => { skillMode = 'matrix'; renderSkills(); });
+        renderSkills();
+
+        // Copy Email & Theme Toggle
+        document.getElementById('copy-email-btn').addEventListener('click', async (e) => {
+          try { await navigator.clipboard.writeText('prarthank123@gmail.com'); } catch (err) {}
+          e.target.textContent = 'Copied';
+          setTimeout(() => { e.target.textContent = 'Copy Email'; }, 1800);
+        });
+        document.querySelectorAll('[data-theme-toggle]').forEach((b) => b.addEventListener('click', () => {
+          const dark = document.documentElement.classList.toggle('dark');
+          try { localStorage.setItem('prarthan-theme-v2', dark ? 'dark' : 'light'); } catch (e) {}
+        }));
+
+        // Design & Cursor Studio
+        const DEFAULT_CFG = { palette: 'neon-green', typography: 'syne-dossier', graphics: 'dots', surface: 'sharp', cursor: 'default' };
+        const PRESETS = [
+          { id: 'clinical-dossier', name: 'Clinical Dossier (Signature)', mode: 'dark', palette: 'neon-green', typography: 'syne-dossier', graphics: 'dots', surface: 'sharp' },
+          { id: 'clinical-precision', name: 'Clinical Precision Light', mode: 'light', palette: 'teal', typography: 'modern-sans', graphics: 'molecular', surface: 'hairline' },
+          { id: 'midnight-lab', name: 'Midnight Research Lab', mode: 'dark', palette: 'teal', typography: 'modern-sans', graphics: 'molecular', surface: 'glass' },
+          { id: 'academic-monograph', name: 'Academic Monograph', mode: 'light', palette: 'indigo', typography: 'editorial-serif', graphics: 'blueprint', surface: 'sharp' },
+          { id: 'botanical-science', name: 'Botanical Pharmacognosy', mode: 'light', palette: 'emerald', typography: 'geometric-clean', graphics: 'helix', surface: 'elevated' },
+          { id: 'executive-archive', name: 'Executive Archival', mode: 'light', palette: 'amber', typography: 'editorial-serif', graphics: 'contours', surface: 'dossier' },
+          { id: 'regulatory-blueprint', name: 'Regulatory Blueprint', mode: 'dark', palette: 'sapphire', typography: 'syne-dossier', graphics: 'blueprint', surface: 'sharp' },
+          { id: 'crimson-editorial', name: 'Clinical Journal Crimson', mode: 'dark', palette: 'crimson', typography: 'editorial-serif', graphics: 'aura', surface: 'tinted' }
+        ];
+        let studioCfg = { ...DEFAULT_CFG };
+        try { const saved = JSON.parse(localStorage.getItem('prarthan-design-config-v2') || 'null'); if (saved) studioCfg = { ...DEFAULT_CFG, ...saved }; } catch (e) {}
+
+        const backdropEl = document.getElementById('portfolio-backdrop');
+        const cursorLayer = document.getElementById('custom-cursor-layer');
+        const drawerEl = document.getElementById('studio-drawer');
+        const controlsEl = document.getElementById('studio-controls');
+        let cursorCleanup = null;
+
+        const renderBackdrop = () => {
+          if (studioCfg.graphics === 'clean') { backdropEl.innerHTML = ''; return; }
+          if (studioCfg.graphics === 'dots') { backdropEl.innerHTML = `<div class="h-full w-full opacity-50" style="background-image:radial-gradient(circle, rgba(148,163,184,0.22) 1px, transparent 1px);background-size:32px 32px;"></div>`; return; }
+          if (studioCfg.graphics === 'aura') { backdropEl.innerHTML = `<div class="absolute -top-40 right-[-10%] h-[520px] w-[520px] rounded-full blur-3xl" style="background:radial-gradient(circle, var(--accent-aura) 0%, transparent 70%);"></div>`; return; }
+          if (studioCfg.graphics === 'blueprint') { backdropEl.innerHTML = `<svg class="h-full w-full opacity-15" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="gp-bp" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M 32 0 L 0 0 0 32" fill="none" stroke="currentColor" stroke-width="0.7"/></pattern></defs><rect width="100%" height="100%" fill="url(#gp-bp)"/></svg>`; return; }
+          if (studioCfg.graphics === 'helix') { backdropEl.innerHTML = `<svg viewBox="0 0 260 900" preserveAspectRatio="none" class="absolute top-0 right-0 h-full w-56 opacity-15" style="color:var(--accent);" fill="none"><path d="M 70 0 C 210 112, 210 188, 70 300 C -70 412, -70 488, 70 600 C 210 712, 210 788, 70 900" stroke="currentColor" stroke-width="1.6"/></svg>`; return; }
+          if (studioCfg.graphics === 'contours') { backdropEl.innerHTML = `<svg viewBox="0 0 1200 800" class="h-full w-full opacity-15" fill="none">${[1,2,3,4,5].map((r)=>`<ellipse cx="1040" cy="120" rx="${r*85}" ry="${r*55}" stroke="currentColor"/>`).join('')}</svg>`; return; }
+          backdropEl.innerHTML = `<svg class="h-full w-full opacity-15" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="gp-hex" width="96" height="84" patternUnits="userSpaceOnUse"><polygon points="48,4 84,24 84,60 48,80 12,60 12,24" fill="none" stroke="currentColor" stroke-width="0.9"/></pattern></defs><rect width="100%" height="100%" fill="url(#gp-hex)"/></svg>`;
+        };
+
+        const initCursor = () => {
+          if (cursorCleanup) { cursorCleanup(); cursorCleanup = null; }
+          cursorLayer.innerHTML = '';
+          const fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+          const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+          if (!fine || reduced || studioCfg.cursor === 'default') return;
+          let tx = window.innerWidth / 2, ty = window.innerHeight / 2, cx = tx, cy = ty, raf = 0;
+          const pts = [0,1,2,3,4].map(() => ({ x: tx, y: ty }));
+          if (studioCfg.cursor === 'spotlight') {
+            cursorLayer.innerHTML = `<div id="c-trail" class="pointer-events-none fixed top-0 left-0 z-50 -ml-44 -mt-44 h-88 w-88 rounded-full" style="background:radial-gradient(circle, var(--accent-aura) 0%, transparent 65%);will-change:transform;"></div>`;
+          } else if (studioCfg.cursor === 'reticle') {
+            cursorLayer.innerHTML = `<div id="c-main" class="pointer-events-none fixed top-0 left-0 z-50 -ml-3 -mt-3 h-6 w-6" style="color:var(--accent);will-change:transform;"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="2" x2="12" y2="8"/><line x1="12" y1="16" x2="12" y2="22"/><line x1="2" y1="12" x2="8" y2="12"/><line x1="16" y1="12" x2="22" y2="12"/><circle cx="12" cy="12" r="2" fill="currentColor" stroke="none"/></svg></div><div id="c-trail" class="pointer-events-none fixed top-0 left-0 z-50 -ml-5 -mt-5 h-10 w-10 rounded-full border opacity-70" style="border-color:var(--accent);will-change:transform;"></div>`;
+          } else if (studioCfg.cursor === 'molecular-orbit') {
+            cursorLayer.innerHTML = `<div id="c-main" class="pointer-events-none fixed top-0 left-0 z-50 -ml-2 -mt-2 h-4 w-4" style="color:var(--accent);will-change:transform;"><svg viewBox="0 0 16 16" class="h-4 w-4" fill="currentColor"><polygon points="8,1 14,4.5 14,11.5 8,15 2,11.5 2,4.5"/></svg></div><div id="c-trail" class="pointer-events-none fixed top-0 left-0 z-50 -ml-5 -mt-5 h-10 w-10" style="color:var(--accent);will-change:transform;"><svg viewBox="0 0 40 40" class="h-10 w-10" fill="none"><g class="cursor-orbit-spin"><circle cx="20" cy="20" r="15" stroke="currentColor" stroke-width="1.2" stroke-dasharray="6 4"/><circle cx="20" cy="5" r="2.6" fill="currentColor"/></g></svg></div>`;
+          } else if (studioCfg.cursor === 'editorial-brackets') {
+            cursorLayer.innerHTML = `<div id="c-main" class="pointer-events-none fixed top-0 left-0 z-50 -ml-1 -mt-1 h-2 w-2 rounded-full" style="background:var(--accent);will-change:transform;"></div><div id="c-trail" class="pointer-events-none fixed top-0 left-0 z-50 -ml-4 -mt-4 h-8 w-8" style="color:var(--accent);will-change:transform;"><svg viewBox="0 0 32 32" class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M 3 10 L 3 3 L 10 3"/><path d="M 22 3 L 29 3 L 29 10"/><path d="M 29 22 L 29 29 L 22 29"/><path d="M 10 29 L 3 29 L 3 22"/></svg></div>`;
+          } else if (studioCfg.cursor === 'comet-trail') {
+            cursorLayer.innerHTML = `<div id="c-main" class="pointer-events-none fixed top-0 left-0 z-50 -ml-1.5 -mt-1.5 h-3 w-3 rounded-full" style="background:var(--accent);will-change:transform;"></div>` +
+              [0,1,2,3,4].map((i) => `<div id="c-comet-${i}" class="pointer-events-none fixed top-0 left-0 z-50 rounded-full" style="width:${10-i*1.4}px;height:${10-i*1.4}px;margin-left:-${(10-i*1.4)/2}px;margin-top:-${(10-i*1.4)/2}px;background:var(--accent);opacity:${0.65-i*0.11};will-change:transform;"></div>`).join('');
+          } else {
+            cursorLayer.innerHTML = `<div id="c-main" class="pointer-events-none fixed top-0 left-0 z-50 -ml-1 -mt-1 h-2 w-2 rounded-full" style="background:var(--accent);will-change:transform;"></div><div id="c-trail" class="pointer-events-none fixed top-0 left-0 z-50 -ml-4 -mt-4 h-8 w-8 rounded-full border opacity-90" style="border-color:var(--accent);will-change:transform;"></div>`;
+          }
+          const mainEl = document.getElementById('c-main'), trailEl = document.getElementById('c-trail');
+          const cEls = [0,1,2,3,4].map((i) => document.getElementById(`c-comet-${i}`));
+          const onMove = (e) => { tx = e.clientX; ty = e.clientY; if (mainEl) mainEl.style.transform = `translate3d(${tx}px,${ty}px,0)`; };
+          const tick = () => {
+            cx += (tx - cx) * 0.22; cy += (ty - cy) * 0.22;
+            if (trailEl) trailEl.style.transform = `translate3d(${cx}px,${cy}px,0)`;
+            if (studioCfg.cursor === 'comet-trail') {
+              let px = tx, py = ty;
+              for (let i = 0; i < pts.length; i++) {
+                pts[i].x += (px - pts[i].x) * (0.34 - i * 0.03);
+                pts[i].y += (py - pts[i].y) * (0.34 - i * 0.03);
+                px = pts[i].x; py = pts[i].y;
+                if (cEls[i]) cEls[i].style.transform = `translate3d(${px}px,${py}px,0)`;
+              }
+            }
+            raf = requestAnimationFrame(tick);
+          };
+          window.addEventListener('mousemove', onMove, { passive: true });
+          raf = requestAnimationFrame(tick);
+          cursorCleanup = () => { cancelAnimationFrame(raf); window.removeEventListener('mousemove', onMove); };
+        };
+
+        const applyStudio = () => {
+          document.documentElement.setAttribute('data-palette', studioCfg.palette);
+          document.documentElement.setAttribute('data-typography', studioCfg.typography);
+          document.documentElement.setAttribute('data-surface', studioCfg.surface);
+          document.documentElement.setAttribute('data-cursor', studioCfg.cursor);
+          try { localStorage.setItem('prarthan-design-config-v2', JSON.stringify(studioCfg)); } catch (e) {}
+          renderBackdrop(); initCursor(); renderStudioControls();
+        };
+
+        const renderStudioControls = () => {
+          const btn = (key, id, label) => `<button type="button" data-k="${key}" data-v="${id}" class="border px-3 py-2 text-left transition-colors ${studioCfg[key] === id ? 'accent-border accent-soft-bg accent-text font-semibold' : ''}" style="${studioCfg[key] !== id ? 'border-color:var(--hairline);color:var(--ink-secondary);' : ''}">${label}</button>`;
+          controlsEl.innerHTML = `
+            <div><p class="dossier-mono mb-2 text-[10px]">01. Complete Portfolio Designs (8)</p><div class="grid grid-cols-1 gap-1.5">${PRESETS.map((p) => `<button type="button" data-preset="${p.id}" class="flex items-center justify-between border px-3 py-2 text-left" style="border-color:var(--hairline);"><span>${p.name}</span><span class="font-mono text-[9.5px] uppercase opacity-60">${p.mode}</span></button>`).join('')}</div></div>
+            <div><p class="dossier-mono mb-2 text-[10px]">02. Mouse Cursor (7)</p><div class="grid grid-cols-2 gap-1.5">${btn('cursor','default','System Default')}${btn('cursor','reticle','Clinical Reticle')}${btn('cursor','dot-ring','Dot & Ring')}${btn('cursor','spotlight','Accent Spotlight')}${btn('cursor','molecular-orbit','Molecular Orbit')}${btn('cursor','editorial-brackets','Viewfinder Brackets')}${btn('cursor','comet-trail','Fluid Comet Trail')}</div></div>
+            <div><p class="dossier-mono mb-2 text-[10px]">03. Color Palette (7)</p><div class="grid grid-cols-2 gap-1.5">${btn('palette','neon-green','Neon Clinical Green')}${btn('palette','teal','Clinical Teal')}${btn('palette','indigo','Academic Indigo')}${btn('palette','emerald','Botanical Emerald')}${btn('palette','amber','Monograph Amber')}${btn('palette','crimson','Clinical Crimson')}${btn('palette','sapphire','Regulatory Sapphire')}</div></div>
+            <div><p class="dossier-mono mb-2 text-[10px]">04. Typography (4)</p><div class="grid grid-cols-1 gap-1.5">${btn('typography','syne-dossier','Syne Dossier (Signature)')}${btn('typography','modern-sans','Clinical Modern')}${btn('typography','editorial-serif','Academic Serif')}${btn('typography','geometric-clean','Geometric Lab')}</div></div>
+            <div><p class="dossier-mono mb-2 text-[10px]">05. Background Graphics (7)</p><div class="grid grid-cols-2 gap-1.5">${btn('graphics','dots','Dot Matrix')}${btn('graphics','clean','Clean Canvas')}${btn('graphics','molecular','Molecular Lattice')}${btn('graphics','aura','Ambient Aura')}${btn('graphics','blueprint','Blueprint Grid')}${btn('graphics','helix','Biomedical Helix')}${btn('graphics','contours','Contours')}</div></div>
+            <div><p class="dossier-mono mb-2 text-[10px]">06. Card Surface (6)</p><div class="grid grid-cols-2 gap-1.5">${btn('surface','sharp','Sharp Dossier')}${btn('surface','hairline','Editorial Hairline')}${btn('surface','glass','Translucent Glass')}${btn('surface','elevated','Soft Elevated')}${btn('surface','dossier','Offset Frame')}${btn('surface','tinted','Tinted Surface')}</div></div>
+          `;
+          controlsEl.querySelectorAll('[data-preset]').forEach((el) => el.addEventListener('click', () => {
+            const p = PRESETS.find((x) => x.id === el.dataset.preset);
+            if (!p) return;
+            document.documentElement.classList.toggle('dark', p.mode === 'dark');
+            try { localStorage.setItem('prarthan-theme-v2', p.mode); } catch (e) {}
+            studioCfg = { ...studioCfg, palette: p.palette, typography: p.typography, graphics: p.graphics, surface: p.surface };
+            applyStudio();
+          }));
+          controlsEl.querySelectorAll('[data-k]').forEach((el) => el.addEventListener('click', () => { studioCfg[el.dataset.k] = el.dataset.v; applyStudio(); }));
+        };
+
+        document.querySelectorAll('[data-open-studio]').forEach((b) => b.addEventListener('click', () => { drawerEl.classList.remove('hidden'); drawerEl.classList.add('flex'); }));
+        document.getElementById('close-studio-btn').addEventListener('click', () => { drawerEl.classList.add('hidden'); drawerEl.classList.remove('flex'); });
+        document.getElementById('done-studio-btn').addEventListener('click', () => { drawerEl.classList.add('hidden'); drawerEl.classList.remove('flex'); });
+        document.getElementById('reset-studio-btn').addEventListener('click', () => {
+          document.documentElement.classList.add('dark');
+          try { localStorage.setItem('prarthan-theme-v2', 'dark'); } catch (e) {}
+          studioCfg = { ...DEFAULT_CFG };
+          applyStudio();
+        });
+        drawerEl.addEventListener('click', (e) => { if (e.target === drawerEl) { drawerEl.classList.add('hidden'); drawerEl.classList.remove('flex'); } });
+        applyStudio();
+      });
+    </script>
+  </body>
+</html>

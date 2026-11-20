@@ -88,8 +88,8 @@ export const PROFILE = {
   linkedinDisplay: 'linkedin.com/in/prarthan-kn-39632a2b3',
   researchGate: 'https://share.google/nEEqim0xCMG8apCKP',
   researchGateDisplay: 'ResearchGate Profile',
-  portraitSrc: '/assets/aistudio/WhatsApp_Image_2026-08-27_at_5.35.01_PM_da4e39f4.jpeg',
-  cvPdfSrc: '/assets/aistudio/Prarthan_K_N__CV___cb10206a.pdf',
+  portraitSrc: `${import.meta.env.BASE_URL}assets/aistudio/WhatsApp_Image_2026-08-27_at_5.35.01_PM_da4e39f4.jpeg`,
+  cvPdfSrc: `${import.meta.env.BASE_URL}assets/aistudio/Prarthan_K_N__CV___cb10206a.pdf`,
   registration: 'Registered Member, Karnataka State Pharmacy Council (KSPC)',
   languages: ['English', 'Hindi', 'Kannada'],
 };

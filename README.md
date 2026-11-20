@@ -1,14 +1,41 @@
-# Dr. Prarthan KN — Academic & Clinical Pharmacy Portfolio
+# Dr. Prarthan KN — Clinical Pharmacy & Research Dossier
 
-Responsive, single-page personal portfolio designed for direct deployment on **GitHub Pages** with zero build steps.
+Personal academic and clinical pharmacy portfolio for **Dr. Prarthan KN (PharmD PB, B.Pharm)**, pre-configured for **GitHub Pages** using either automatic GitHub Actions builds or instant zero-build hosting from `/docs`.
 
-## Quick Setup for GitHub Pages
+---
 
-1. Create a new public GitHub repository (for example, `prarthan-portfolio` or `<your-username>.github.io`).
-2. Copy the standalone `github-pages/index.html` file to the root of your repository as `index.html`.
-3. Add your personal assets directly into the repository root alongside `index.html`:
-   - **`profile.jpg`** — Your portrait photo (recommended aspect ratio `3:4`, minimum `900 × 1200 px`). If omitted, the page automatically renders a clean initials monogram placeholder.
-   - **`CV.pdf`** — Your latest Curriculum Vitae PDF, linked directly to the **Download CV** button.
-4. Commit and push the three files (`index.html`, `profile.jpg`, `CV.pdf`) to the `main` branch.
-5. In your repository, go to **Settings → Pages → Build and deployment**, set **Source** to **Deploy from a branch**, select **`main`** and **`/ (root)`**, and click **Save**.
-6. Your portfolio will be live at `https://<your-username>.github.io/<repo-name>/` within 1–2 minutes.
+## Why GitHub Pages Might Show a Blank Page or 404
+
+The root `index.html` in this repository is a Vite + React source entry point (`src/main.tsx`), which browsers cannot execute directly without building first. If GitHub Pages is pointed at **Branch: `main` → `/ (root)`**, it will fail to open.
+
+Use **either** of the two working methods below:
+
+---
+
+## Option 1: Automatic Full React Build (Recommended)
+
+A ready-to-run workflow is included at `.github/workflows/deploy.yml`.
+
+1. Push this repository to GitHub (make sure the repository is **Public**, or you have GitHub Pro for private Pages).
+2. In your GitHub repository, open **Settings → Pages**.
+3. Under **Build and deployment → Source**, select **GitHub Actions**.
+4. Push a commit to `main` (or open the **Actions** tab → **Deploy Portfolio to GitHub Pages** → **Run workflow**).
+5. Your live URL will appear in **Settings → Pages** within 1–2 minutes.
+
+---
+
+## Option 2: Instant Zero-Build Hosting via `/docs` (No Actions Needed)
+
+A complete standalone zero-build bundle is pre-packaged inside `/docs` (`index.html`, `profile.jpg`, `CV.pdf`, and `.nojekyll`).
+
+1. Push this repository to GitHub.
+2. Open **Settings → Pages → Build and deployment**.
+3. Set **Source** to **Deploy from a branch**.
+4. Select Branch **`main`** and Folder **`/docs`**, then click **Save**.
+5. Wait 1–2 minutes and open `https://<your-username>.github.io/<repo-name>/`.
+
+---
+
+## Option 3: Upload Standalone Files to Any Repo Root
+
+Copy all files from `github-pages/` (`index.html`, `profile.jpg`, `CV.pdf`, `.nojekyll`) directly to the root of a new public repository and set **Settings → Pages** to **`main` → `/ (root)`**.
