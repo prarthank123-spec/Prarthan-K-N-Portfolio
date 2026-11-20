@@ -1,41 +1,20 @@
 # Dr. Prarthan KN — Clinical Pharmacy & Research Dossier
 
-Personal academic and clinical pharmacy portfolio for **Dr. Prarthan KN (PharmD PB, B.Pharm)**, pre-configured for **GitHub Pages** using either automatic GitHub Actions builds or instant zero-build hosting from `/docs`.
+Personal academic and clinical pharmacy portfolio for **Dr. Prarthan KN (PharmD PB, B.Pharm)**, pre-configured to open cleanly on **GitHub Pages** under **any** deployment setting.
 
 ---
 
-## Why GitHub Pages Might Show a Blank Page or 404
+## How to Open on GitHub Pages (All 3 Methods Work)
 
-The root `index.html` in this repository is a Vite + React source entry point (`src/main.tsx`), which browsers cannot execute directly without building first. If GitHub Pages is pointed at **Branch: `main` → `/ (root)`**, it will fail to open.
-
-Use **either** of the two working methods below:
-
----
-
-## Option 1: Automatic Full React Build (Recommended)
-
-A ready-to-run workflow is included at `.github/workflows/deploy.yml`.
-
-1. Push this repository to GitHub (make sure the repository is **Public**, or you have GitHub Pro for private Pages).
-2. In your GitHub repository, open **Settings → Pages**.
-3. Under **Build and deployment → Source**, select **GitHub Actions**.
-4. Push a commit to `main` (or open the **Actions** tab → **Deploy Portfolio to GitHub Pages** → **Run workflow**).
-5. Your live URL will appear in **Settings → Pages** within 1–2 minutes.
+1. Push this repository to GitHub (**Public** repository for free GitHub Pages).
+2. Open **Repository Settings → Pages → Build and deployment** and pick **any** of these:
+   - **Method 1 (Fastest — Zero Build):** Set **Source** to **Deploy from a branch** → Branch **`main`** → Folder **`/docs`** → **Save**.
+   - **Method 2 (Default Root Branch):** Set **Source** to **Deploy from a branch** → Branch **`main`** → Folder **`/ (root)`** → **Save** (automatically routes to the pre-built `/docs/` bundle on `*.github.io`).
+   - **Method 3 (Automatic GitHub Actions):** Set **Source** to **GitHub Actions** → push to `main`/`master` or run **Deploy Portfolio to GitHub Pages** in the **Actions** tab.
+3. Wait 1–2 minutes and open `https://<your-username>.github.io/<repo-name>/`.
 
 ---
 
-## Option 2: Instant Zero-Build Hosting via `/docs` (No Actions Needed)
+## Standalone 3-File Option
 
-A complete standalone zero-build bundle is pre-packaged inside `/docs` (`index.html`, `profile.jpg`, `CV.pdf`, and `.nojekyll`).
-
-1. Push this repository to GitHub.
-2. Open **Settings → Pages → Build and deployment**.
-3. Set **Source** to **Deploy from a branch**.
-4. Select Branch **`main`** and Folder **`/docs`**, then click **Save**.
-5. Wait 1–2 minutes and open `https://<your-username>.github.io/<repo-name>/`.
-
----
-
-## Option 3: Upload Standalone Files to Any Repo Root
-
-Copy all files from `github-pages/` (`index.html`, `profile.jpg`, `CV.pdf`, `.nojekyll`) directly to the root of a new public repository and set **Settings → Pages** to **`main` → `/ (root)`**.
+If you prefer a single zero-build HTML file without the React project files, upload the contents of `github-pages/` (`index.html`, `profile.jpg`, `CV.pdf`, `.nojekyll`) directly to the root of a public repository.

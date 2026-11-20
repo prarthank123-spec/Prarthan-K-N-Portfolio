@@ -60,5 +60,15 @@
   <body class="antialiased">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      (function () {
+        if (
+          document.querySelector('script[src="/src/main.tsx"]') &&
+          /\.github\.io$/i.test(window.location.hostname)
+        ) {
+          window.location.replace('./docs/');
+        }
+      })();
+    </script>
   </body>
 </html>
